@@ -112,3 +112,25 @@ WHO$Country[183]
 #Q3
 which.max(WHO$LiteracyRate)
 WHO$Country[44]
+
+# Video 6
+# Create a histogram for a specific value
+hist(WHO$CellularSubscribers)
+
+# Now make a box plot of LifeExpectancy sorted by Region
+boxplot(WHO$LifeExpectancy ~ WHO$Region)
+
+# Now add labels, leave x alone, and add a titile
+boxplot(WHO$LifeExpectancy ~ WHO$Region, xlab="",ylab="Life Expectancy", main="Life Expectancy")
+
+# Look at Summary Tables
+table(WHO$Region)
+
+# See information about numerical values, such as % of population above 60
+tapply(WHO$Over60, WHO$Region, mean)
+
+# Another example
+tapply(WHO$LiteracyRate, WHO$Region, min)
+
+# Above example gave na due to missing variables, remove countries with missing values
+tapply(WHO$LiteracyRate, WHO$Region, min, na.rm = TRUE)
