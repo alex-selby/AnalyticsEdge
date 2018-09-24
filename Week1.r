@@ -102,3 +102,13 @@ nrow(outliers)
 
 # See country names in subset by making a vector of the names of the variables
 outliers[c("Country","GNI","FertilityRate")]
+
+# Video 5 Quiz
+#Q1
+mean(WHO$Over60)
+#Q2
+which.min(WHO$Over60)
+WHO$Country[183]
+#Q3
+which.max(WHO$LiteracyRate)
+WHO$Country[44]
