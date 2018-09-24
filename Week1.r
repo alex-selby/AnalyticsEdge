@@ -134,3 +134,6 @@ tapply(WHO$LiteracyRate, WHO$Region, min)
 
 # Above example gave na due to missing variables, remove countries with missing values
 tapply(WHO$LiteracyRate, WHO$Region, min, na.rm = TRUE)
+
+# Video 6 Quiz
+tapply(WHO$ChildMortality, WHO$Region, mean)
